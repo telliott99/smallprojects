@@ -44,7 +44,7 @@ And then finally, note that when starting up the system, the temperature reporte
 
 <img src="figs/home.png" style="width: 400px;"/>
 
-will likely be off by a few degrees for an hour or so.
+will likely be off by a few degrees, for an hour or so.  The AC will still run to reach the set-point (e.g. display shows 74, actual is 80, set-point is 76, the unit will cool).
 
 #### Two modes
 
