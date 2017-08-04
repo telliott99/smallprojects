@@ -32,15 +32,15 @@ If the screen is locked, the super-duper secret unlocking method is to press **M
 
 #### Overview
 
-There are two modes for controlling the unit:  a basic one and something more advanced.  The latter is called **Scheduling**, and the basic mode is called **1-Touch**.
+There are two modes for controlling the unit:  a basic mode is called **1-Touch** and an advanced mode called **Scheduling**.
 
-On the main screen is displayed the actual indoor temperature, in large digits on the left.  Below it is  **Cooling** or **System Idle** or **System Off** etc.
+On the main screen the actual indoor temperature is displayed in large digits on the left.  Below it is  **Cooling** or **System Idle** or **System Off** etc.
 
 <img src="home.png" style="width: 400px;"/>
 
 Next below that (just above **Menu**) is a description of which one of these modes is in use, e.g. **Scheduling disabled** or **Following Schedule X**.
 
-Below that are four buttons that bring up additional screens:  **Menu**, **System Mode**, **Fan Mode**, and **Air Cleaner**.  
+And below that are four buttons that bring up additional screens:  **Menu**, **System Mode**, **Fan Mode**, and **Air Cleaner**.  
 
 To change whether scheduling is enabled, do
 
@@ -52,7 +52,7 @@ and toggle the Schedules button.
 
 Go **Back** to **Menu**.  
 
-In the manual, the **Menu** screen also has a button titled **Schedules**.  On our actual controls, if scheduling is off and we're in 1-Touch mode, this button says **1-Touch Presets**...
+In the manual, the **Menu** screen also has a button titled **Schedules**.  But on our actual controls, if scheduling is off and we're in 1-Touch mode, this button says **1-Touch Presets**...
 
 <img src="menu.png" style="width: 400px;"/>
 
@@ -82,7 +82,7 @@ If scheduling is active, then the temperature control screen shows what is on th
 
 <img src="temp2.png" style="width: 400px;"/>
 
-Thus, another way to maintain the current settings indefinitely, with scheduling active, would be to select **Hold Perm**.  However, the default is to only **Hold Until** the next scheduled period begins.
+Thus, another way to maintain the current settings indefinitely, with scheduling active, would be to select **Hold Perm**.  However, the default is to only **Hold Until** the next scheduled period begins.  This is why our brand-new unit switched off automatically at 6 in the morning.
 
 #### Optimization
 
