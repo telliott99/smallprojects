@@ -16,9 +16,7 @@ He's a wonderful guy and we recommend him and his company highly.  If you live i
 
 #### Setting the Trane Thermostat
 
-The point of the write-up is to provide an overview of programming the new thermostats.
-
-These are:
+The point of the write-up is to provide a TL;DR for the new thermostats, which are:
 
 * Trane XL824 Smart Control
 
@@ -36,18 +34,13 @@ This is the home screen from the manual
 
 Before I could do anything else, I needed to change the screen brightness to 100% so I could actually see it.  I had to read the manual to find out how to do this since I could not actually read the screen at 60% brightness.
 
-* Press Home > Menu
-
-<img src="figs/home_menu.png" style="width: 400px;"/>
-
-
 * Press Menu > Settings
 
-<img src="figs/menu_settings.png" style="width: 400px;"/>
+<img src="figs/menu.png" style="width: 400px;"/>
 
 * Press Settings > Display
 
-<img src="figs/settings_display.png" style="width: 400px;"/>
+<img src="figs/settings.png" style="width: 400px;"/>
 
 and follow the on-screen prompt.
 
@@ -55,7 +48,7 @@ and follow the on-screen prompt.
 
 If you want to turn the unit off quickly, press System Mode on the home screen (next to Menu) and toggle the button.  The system in the figure below is set to **Auto** (heat or cool, whatever is necessary).
 
-<img src="figs/home_system_mode.png" style="width: 400px;"/>
+<img src="figs/home.png" style="width: 400px;"/>
 
 **screen lock**
 
@@ -63,11 +56,11 @@ If the screen is locked, the super-duper secret unlocking method is to press **M
 
 Screen lock set and unset is done from the menu screen.
 
-<img src="figs/menu_lock.png" style="width: 400px;"/>
+<img src="figs/menu.png" style="width: 400px;"/>
 
 And then finally, note that when starting up the system, the temperature reported (76 in large digits on the left)
 
-<img src="figs/home_temp.png" style="width: 400px;"/>
+<img src="figs/home.png" style="width: 400px;"/>
 
 will likely be off by a few degrees (low), for an hour or so.
 
@@ -77,7 +70,7 @@ There are two modes for controlling the unit:  a basic mode called **1-Touch** a
 
 On the main screen the actual indoor temperature is displayed in large digits on the left.  Below it appears one of  **Cooling** or **System Idle** or **System Off**, etc.
 
-<img src="figs/home_idle.png" style="width: 400px;"/>
+<img src="figs/home.png" style="width: 400px;"/>
 
 Next below that (just above **Menu**) is a description of which one of these modes is in use, e.g. **Scheduling disabled** or **Following Schedule X**.
 
@@ -87,17 +80,17 @@ To change whether scheduling is enabled, do
 
 *  Menu > Settings 
 
-and toggle the **Schedules** button.
+<img src="figs/settings.png" style="width: 400px;"/>
 
-<img src="figs/settings_schedules.png" style="width: 400px;"/>
+and toggle the **Schedules** button.
 
 Now go **Back** to **Menu**.  
 
 In the manual, the **Menu** screen also has a button titled **Schedules**.  
 
-<img src="figs/menu_schedules.png" style="width: 400px;"/>
+But on the actual controls I have, if scheduling is off and we're in 1-Touch mode, this button says **1-Touch Presets**, which makes sense.
 
-But on the actual control I have, if scheduling is off and we're in 1-Touch mode, this button says **1-Touch Presets**, which makes sense.
+<img src="figs/menu.png" style="width: 400px;"/>
 
 If scheduling is enabled, the button says **Schedules**, and pressing it leads to a screen for laying out custom schedules.  
 
@@ -111,15 +104,13 @@ The display shown below for Temperature Control Panel is the one seen when in **
 
 <img src="figs/temp.png" style="width: 400px;"/>
 
-Toggle "Away" etc. to select which temperature setting you want to change.  A second selection is the value.  The top temperature setting is for cooling and the bottom for heating. 
-
-<img src="figs/temp_cool.png" style="width: 400px;"/> 
+Toggle "Away" etc. to select which temperature setting you want to change.  A second selection is the value.  The top temperature setting is for cooling and the bottom for heating.  
 
 The arrows on the right change the values.  The wavy blue icon indicates cooling (i.e. the top value is selected, so we're editing the set point for cooling).
 
 Back on the home screen, in the upper right-hand corner is an icon that says **Away** 
 
-<img src="figs/home_away.png" style="width: 400px;"/>
+<img src="figs/home.png" style="width: 400px;"/>
 
 I had trouble understanding this at first, because **Away** is *always* visible on the home screen, but it is much brighter when "Away" mode is actually selected.
 
@@ -127,9 +118,9 @@ Toggling this button to **Away** on the home screen *overrides scheduling*.
 
 So rather than turn scheduling off entirely, we might have just activated **Away** by hitting this button, and if the temperature had been set lower than ambient (it is set to 85 with the factory default), then the unit would cool as we want.
 
-If scheduling is active, then the temperature control screen changes
+If scheduling is active, then the temperature control screen shows what is on the far left in the next figure, rather than Away, etc.
 
-<img src="figs/temp_schedules.png" style="width: 400px;"/>
+<img src="figs/temp2.png" style="width: 400px;"/>
 
 Thus, another way to maintain the current settings indefinitely, with scheduling active, would be to select **Hold Perm**.  However, the default is to only **Hold Until** the next scheduled period begins.  
 
@@ -139,6 +130,6 @@ This is why our brand-new unit switched off automatically at 6 in the morning.
 
 One potential complication is a feature called Smart Optimization, which is on by default.  On the Menu screen
 
-<img src="figs/menu_opt.png" style="width: 400px;"/>
+<img src="figs/menu.png" style="width: 400px;"/>
 
 This shuts down the system for 90 minutes after it has been up for 18 hours.  I turned it off.  I guess the idea is that the thermostat would monitor the rate at which the temperature rises with the unit off.
