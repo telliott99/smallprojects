@@ -64,5 +64,55 @@ Two conclusions:  the damaged foot isn't obvious enough because the one I though
 
 Second, we're probably not losing 10 mg per day.  So we can safely let the experiment run for a while.
 
+#### (Almost) one week later
 
+I was unable convince the gang to keep accurate records of which cups had how many mules made, but I have one cup that was unused (u), the others had roughly one mule per day.  
 
+I matched them up with the previous numbering system by the gram weights:
+
+    2017-Aug-12
+    #1 276.226 (u)
+    #2 280.280
+    #3 285.109 (h)
+    #4 277.191
+
+Compared to the initial values
+
+    2017-Aug-6
+    #1 276.209
+    #2 280.266
+    #3 285.094 (h)
+    #4 277.126
+
+we see a problem:  we're *gaining* weight.
+
+The &Delta;s
+
+    #1 + 0.015 (u)
+    #2 + 0.014
+    #3 + 0.015 (h)
+    #4 + 0.065
+
+I dry them gently for 15 min on low in the warming oven, then cool for 30 min at RT.
+
+    2017-Aug-12 2nd weighing
+    #1 276.213 (u)
+    #2 280.273
+    #3 285.102 (h)
+    #4 277.188
+
+with &Delta;s
+
+    #1 + 0.004 (u)
+    #2 + 0.007
+    #3 + 0.008 (h)
+    #4 + 0.062
+
+I can't really explain the gain of 62 mg by #4.  However, the others don't seem to have changed much.
+
+For the next cycle, we'll use only #2 and #3 to make mules.  Then we'll do 
+
+* wash
+* dry ON
+* dry for 15 min on low in the warming oven
+* cool for 30 min at RT

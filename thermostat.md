@@ -51,6 +51,14 @@ Before I could do anything else, I needed to change the screen brightness to 100
 
 and follow the on-screen prompt.
 
+**Quick temp change**
+
+The set temperature can be changed quickly, by pressing in the middle of the right-hand side.
+
+<img src="figs/quick.png" style="width: 400px;"/>
+
+If scheduling is enabled (see below), then this changes only the current period.  If 1-Touch is enabled (again, below), then this change may or may not be associated with one of the 1-Touch settings (I know, it's confusing).  Nevertheless, this is a good way to make a quick, temporary adjustment.
+
 **system off/on**
 
 If you want to turn the unit off quickly, press System Mode on the home screen (next to Menu) and toggle the button.  The system in the figure below is set to **Auto** (heat or cool, whatever is necessary).
@@ -73,7 +81,7 @@ will likely be off by a few degrees (low), for an hour or so.
 
 #### Two modes
 
-There are two modes for controlling the unit:  a basic mode called **1-Touch** and an advanced mode called **Scheduling**.
+There are two standard modes for controlling the unit:  a basic mode called **1-Touch** and an advanced mode called **Scheduling**.
 
 On the main screen the actual indoor temperature is displayed in large digits on the left.  Below it appears one of  **Cooling** or **System Idle** or **System Off**, etc.
 
