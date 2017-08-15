@@ -14,9 +14,11 @@
 * I do not have Sharing enabled, and do not login in remotely.  If you need such capabilities you should learn to `ssh`.
 #### Antivirus
 
-I do not have antivirus software running on my Mac.  
+I do not have antivirus software running on my Mac.  Most of the time antivirus is ineffective because the threat is new and they haven't caught up yet.  If I did use AV, I would use [this](https://www.malwarebytes.com).
 
-I have occasionally scanned with [ClamXav](https://www.clamxav.com) and not found anything.  I do not know of a virus for OS X, but one can pass on Windows viruses in emails or Word docs.  If you would like to check for this, ClamXav should detect it.
+I have occasionally scanned with [ClamXav](https://www.clamxav.com) and not found anything.  
+
+One can pass on Windows viruses in emails or Word docs.  If you would like to check for this, ClamXav should detect it.
 
 The basic problem with antivirus protection is that it cannot cope with new threats fast enough.  
 
@@ -78,3 +80,8 @@ I used to write high security passwords (banking) down on a piece of paper.  Now
 It may be helpful to review recent actual security threats observed for macOS.
 
 in progress
+
+* [Pollicare](Pollicare.md)
+* [Fruitfly](Fruitfly.md) (2017)
+* [Proton.B](Proton_B.md)
+

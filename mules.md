@@ -12,6 +12,8 @@ I use [Rose's](https://en.wikipedia.org/wiki/Rose%27s_lime_juice) lime juice.  T
 
 #### Copper mugs
 
+<img src="figs/mugs.png" style="width: 400px;" />
+
 According to tradition, a mule is served in a copper cup.  Here is part of the [legend](https://moscowcopper.com/pages/our-story?gclid=EAIaIQobChMIiLf835vF1QIVSUsNCh3iVQEgEAAYASAAEgKH_PD_BwE)
 
 <p style="color:blue">
@@ -28,7 +30,7 @@ Copper is also a micronutrient.  The [RDA for copper](http://lpi.oregonstate.edu
 
 [OTOH, should one of us prove to have an undiagnosed genetic disorder affecting copper storage, the safe level might be much less.]
 
-One study cited on the page above had subjects ingest 8 mg per day for 147 days without significant damage (including to the liver).  However, they did accumulate copper, so this is probably too much for the long term.
+One study cited on the page above had subjects ingest 8 mg per day for 147 days without significant damage (including to the liver).  However, they did accumulate copper, so this is likely too much for the long term.
 
 The question is what happens at pH 3 or so during 15 min at a temperature of 0&deg; C.
 
@@ -36,11 +38,13 @@ We could do some [chemistry](http://www.chemguide.co.uk/inorganic/transition/cop
 
 #### Experiment
 
-We obtained 4 mugs from ___.  They are advertised as pure copper and have no obvious lining (though they might have a coating we don't detect---they don't seem to be oxidizing).
+We obtained 4 mugs from ___.  
+
+They are advertised as pure copper and have no obvious lining (though they might have a coating we don't detect---they don't seem to be oxidizing).
 
 The plan is to see if **the weight changes** during extended use.  
 
-Luckily I still have my Sartorius balance.  (Not the nicest one, but the readout for the one I do have goes to 1 mg).
+Luckily I still have my Sartorius balance.  (It's not the fancy one, but the readout does go to 1 mg).
 
 The problem is how to tell the 4 mugs apart.  I weighed each one:
 
@@ -93,7 +97,7 @@ The &Delta;s
     #3 + 0.015 (h)
     #4 + 0.065
 
-I dry them gently for 15 min on low in the warming oven, then cool for 30 min at RT.
+I dry them gently for 15 min on low in the warming oven, then cool for 15 min at RT.
 
     2017-Aug-12 2nd weighing
     #1 276.213 (u)
@@ -114,5 +118,5 @@ For the next cycle, we'll use only #2 and #3 to make mules.  Then we'll do
 
 * wash
 * dry ON
-* dry for 15 min on low in the warming oven
-* cool for 30 min at RT
+* dry for 30 min on low in the warming oven
+* cool for 15 min at RT
