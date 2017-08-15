@@ -132,6 +132,8 @@ This is the [Smokyashan website](http://www.smokyashan.com/about)
 
 *Install applications the easy way and without the hassle, using the Smokyashan downloader. The Smokyashan platform stems from years of experience with installing applications, resulting in a highly optimized process, yielding faster downloads, a better user experience and more successful installations*
 
+#### Solution
 
+If it were me, I would reinstall the OS from scratch.  But my friend isn't crazy about this.  Since it's a non-admin account, I decided to recommend [Malwarebytes](https://www.malwarebytes.com/pricing/mac/).
 
-
+I did this mainly based on the quality of the writing on their website, and the testimonials.
