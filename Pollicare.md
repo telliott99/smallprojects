@@ -1,4 +1,14 @@
-### MyWay
+### MyWay *not*
+
+#### Malware keywords
+
+* OnlineMapFinder
+* Pollicare.app
+* ProntoApp.app
+* Smokyashan.app
+* Search.myway
+
+#### Back story
 
 So today I borrowed my friend's computer to do a search because of an issue I had installing the public beta of macOS High Sierra.
 
@@ -6,7 +16,7 @@ I open Safari and get this page:
 
 <img src="figs/search2.png" style="width: 400px;" />
 
-This ain't Google.
+That isn't Google.
 
 If we look more closely at the whole page, in the upper right-hand corner is:
 
@@ -14,7 +24,7 @@ If we look more closely at the whole page, in the upper right-hand corner is:
 
 and the URL displayed is `hp.myway.com`.
 
-After 18 years of using OS X, I finally see an actual living piece of malware.
+After 18 years of using OS X, I finally see an actual piece of malware in the wild.  Pretty exciting.
 
 I immediately **Clear History..** which also dumps any cookies.  Quit Safari and re-launch it and get the exact same thing.
 
@@ -24,13 +34,13 @@ I immediately **Clear History..** which also dumps any cookies.  Quit Safari and
 
 Several things have happened to Safari:
 
-* a Safari Extension has been installed called Onlinemapfinder
+* a Safari Extension has been installed called OnlineMapFinder
 
 <img src="figs/Onlinemapfinder.png" style="width: 400px;" />
 
 Safari is helpfully warning me that 
 
-*"OnelineMapFinder" can read, modify, and transmit content from all webpages.  This could include sensitive infromation like passwords, phone numbers and credit cards.*
+*"OnelineMapFinder" can read, modify, and transmit content from all webpages.  This could include sensitive information like passwords, phone numbers and credit cards.*
 
 #### New Homepage
 
@@ -46,12 +56,14 @@ But wait, there's more!
 
 <img src="figs/LaunchAgents.png" style="width: 400px;" />
 
-The user's `~/Library/LaunchAgents` directory contains a bunch of malware-related persistence crap, but the `System/Library/LaunchAgents` and `Daemons` have what I would expect.
+The user's `~/Library/LaunchAgents` directory contains a bunch of malware-related persistence crap, but the `System/Library/LaunchAgents` and `System/Library/LaunchDaemons` have what I would expect.
+
+(The difference between an agent and a daemon is that a daemon may not have a UI, while an agent may have one if it wishes).
 
 There are two more applications referenced here:
 
 * Smokyashan
-* pronto
+* Pronto
 
 #### Application
 
@@ -59,9 +71,9 @@ Finally, and most disturbing, there is an application running which shows the na
 
 <img src="figs/pollicare1.png" style="width: 400px;" />
 
-while its name in the menu shows **ApplR**
+while its name in the menu shows **AppIR**
 
-<img src="figs/menu.png" style="width: 400px;" />
+<img src="figs/menu2.png" style="width: 400px;" />
 
 The last clue is
 
@@ -79,7 +91,7 @@ The app is not installed system-wide:
 
 If you navigate to `www.onlinemapfinder.com` there is a redirect to `http://www.onlinemapfinder.com/index.jhtml`.
 
-Why `jhtml`?
+Why `jhtml`?  (Java within Hypertext Markup Language).  Good thing we don't allow Java to run in the browser, or indeed anywhere on *this* computer.
 
 The page looks like this:
 
@@ -89,38 +101,60 @@ So you can imagine how this started.
 
 On the surface this seems like a standard ploy called [browser hijacking](https://en.wikipedia.org/wiki/Browser_hijacking).  
 
-But the persistence, and the application!, suggest more nefarious activity.
+But the persistence, and the installed application!, suggest more nefarious activity.
 
 If you clicked on the download, would the bad guys have the ability to write to the user's `LaunchAgents`?  Or place an application on the machine?  I wouldn't think so.
 
 But I'm feeling very happy that my friend is using Safari as a non-administrative user.
 
+She insists that she doesn't even remember her password and didn't enter it on last July 30, when the plist files below were written.
+
 #### Application Support
 
-There are also files in `~/Library/Application\ Support`:  `Pollicare`
-* ProntoApp
-* Smokyashan
-
-And possibly more (iLifeAssetManagement, iLifeMediaBrowser, icdd).
-
-#### Web Search
-
-So what is all this stuff?  We have one app:
+There are new folders in `~/Library/Application\ Support`:  
 
 * Pollicare
-
-as well as two apps that don't seem to be there but have folders in `~/Library/Application\ Support`:
-
 * ProntoApp
 * Smokyashan
 
-The original Safari extension was
+Although they are in `Library/Application\ Support`, each folder actually contains an application.  We'll come back to this.  
 
-* OnlineMapFinder
+But first, examine
 
-and the malware family is called
+#### ~/Library/LaunchAgents
 
-* MyWay
+I count 8 plist files in `~/Library/LaunchAgents`.  5 of them relate to Pollicare, 2 to ProntoApp and the last to Smokyashan.
+
+The first set launches `Pollicare.app/Contents/MacOS/AppIR` from ``~/Library/Application Support/Pollicare`.  `AppIR` is launched when:
+
+* WatchPaths:   `/Applications/Pollicare/Uninstall Pollicare.app`
+* StartCalendarInterval:   Hour 4 Minute 17
+* WatchPaths:   `~/Library/Saved Application State/com.apple.Safari.savedState/windows.plist`
+* WatchPaths:   `~/Downloads`
+* StartCalendarInterval:   Hour 20 Minute 34
+
+So `AppIR` runs when Safari saves its state, whenever there is a download, and whenever the user tries to run `Uninstall Pollicare.app`.  It also runs twice a day at the specified times, and on wake from sleep.
+
+The second set of two launch `ProntoApp.app/Contents/MacOS/ProntoApp` from ``~/Library/Application Support/ProntoApp`.  `ProntoApp` is launched when:
+
+* `RunAtLoad:   true`
+* StartCalendarInterval:   Minute 59
+* StartCalendarInterval:   Hour 5 Minute 25
+
+`ProtoApp` runs at startup, and every hour at the 59th minute, ect.
+
+Smokyashan:  `Smokyashan.app/Contents/MacOS/AppNOS` runs from `~/Library/Application Support/Smokyashan/` when:
+
+* `RunAtLoad:   true`
+* StartCalendarInterval:   Hour 14 Minute 13
+
+on startup and once a day.
+
+#### Applications
+
+I was unable to find anything reliable on the web about how AppIR, ProntoApp and Smokyashan work.
+
+#### Web Search
 
 Supposedly, [this](http://download.cnet.com/Pronto-App/3000-31713_4-77095406.html) is a description of what ProntoApp does.
 
@@ -134,6 +168,24 @@ This is the [Smokyashan website](http://www.smokyashan.com/about)
 
 #### Solution
 
-If it were me, I would reinstall the OS from scratch.  But my friend isn't crazy about this.  Since it's a non-admin account, I decided to recommend [Malwarebytes](https://www.malwarebytes.com/pricing/mac/).
+If it were me, I would reinstall the OS from scratch.  But my friend isn't crazy about this.  She has old applications like Microsoft Office and Photoshop that she can't easily reinstall.
 
-I did this mainly based on the quality of the writing on their website, and the testimonials.
+I am reasonably sure there is nothing installed System-wide.  So my plan is to save all her personal data, delete that account, and make a fresh one.  The reason is that I cannot be sure I've found everything.
+
+She will also have to change all her passwords.
+
+I've never been a fan of antivirus for Macs, but I will also have to look into it.  I like the blog from [Malwarebytes](https://www.malwarebytes.com/pricing/mac/), but it choked when tested against these files.
+
+#### Verification
+
+[VirusTotal](https://www.virustotal.com) 
+
+<img src="figs/virustotal.png" style="width: 400px;" />
+
+says about 40% of antivirus programs flag AppIR.app as malware (adware).  MalwareBytes does not!
+
+The ratio is about 30% for ProntoApp.app.
+
+Unfortunately ClamXav didn't do so well.  Even with the latest definitions it found only AppIR.
+
+If I get the time, I will try installing MacOS inside Virtual Box and then see if going to the website (and clicking the box) allows the malware to write outside the Safari sandbox.
