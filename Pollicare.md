@@ -1,6 +1,6 @@
 ### MyWay *not*
 
-#### Malware keywords
+#### Keywords
 
 * OnlineMapFinder
 * Pollicare.app
@@ -165,6 +165,10 @@ The Publisher's description:
 This is the [Smokyashan website](http://www.smokyashan.com/about)
 
 *Install applications the easy way and without the hassle, using the Smokyashan downloader. The Smokyashan platform stems from years of experience with installing applications, resulting in a highly optimized process, yielding faster downloads, a better user experience and more successful installations*
+
+#### A family of malware
+
+Patrick Wardle has a [write-up](https://objective-see.com/blog/blog_0x20.html) of something that seems very similar to this, though with different names.  His sample, in turn, seems to belong to a family called SafeFinder/OperatorMac by the guys at [malwarebytes](https://www.malwarebytes.com).
 
 #### Solution
 

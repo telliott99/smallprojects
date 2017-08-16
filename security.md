@@ -69,7 +69,7 @@ The eternal question is how to backup such data securely, since the two requirem
 
 Someone I trust recommends [1Password](https://1password.com) (see [discussion](https://news.ycombinator.com/item?id=9728029)).
 
-I use random text (basically, a password like the one above) for secret questions, though I did once give my mother's birth year as 1809.  Obviously, this needs to be saved securely so it can be copied and pasted.
+I use random text (basically, a password like the one above) for secret questions, though I did once give my mother's birth year as 1809.  Obviously, this needs to be saved securely so it can be copied and pasted.  And that's why web forms that disable password pasting are evil.
 
 For extra security, your everyday account used to surf the web should be a non-privileged user.
 
@@ -79,7 +79,7 @@ I used to write high security passwords (banking) down on a piece of paper.  Now
 
 It may be helpful to review recent actual security threats observed for macOS.
 
-in progress
+(in progress)
 
 * [Pollicare](Pollicare.md)
 * [Fruitfly](Fruitfly.md) (2017)
