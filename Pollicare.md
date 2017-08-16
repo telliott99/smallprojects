@@ -170,6 +170,8 @@ This is the [Smokyashan website](http://www.smokyashan.com/about)
 
 Patrick Wardle has a [write-up](https://objective-see.com/blog/blog_0x20.html) of something that seems very similar to this, though with different names.  His sample, in turn, seems to belong to a family called SafeFinder/OperatorMac by the guys at [malwarebytes](https://www.malwarebytes.com).
 
+There is also a nice article that quotes him extensively [here](https://threatpost.com/signed-mughthesec-adware-hijacking-macs-for-profit/127333/).
+
 #### Solution
 
 If it were me, I would reinstall the OS from scratch.  But my friend isn't crazy about this.  She has old applications like Microsoft Office and Photoshop that she can't easily reinstall.
