@@ -152,10 +152,10 @@ I dry them gently for 15 min on low in the warming oven, then cool for 15 min at
 
 weight with &Delta;
     
-    #1 276.213 + 0.004 (u)
-    #2 280.273 + 0.007
-    #3 285.102 + 0.008 (h)
-    #4 277.188 + 0.062
+    #1 276.213 (+ 0.004) (u)
+    #2 280.273 (+ 0.007)
+    #3 285.102 (+ 0.008) (h)
+    #4 277.188 (+ 0.062)
 
 I can't really explain the gain of 62 mg by #4.  However, the others don't seem to have changed much.
 
@@ -168,16 +168,16 @@ For the next cycle, we'll use only #2 and #3 to make mules.  Then we'll do
 
 #### Continuing the experiment
 
-From a technical point of view, I'm running into all kinds of problems.  The technician has introduced some additional variables, she
+From a technical point of view, I'm running into some problems.  The technician has introduced some additional variables, she sometimes
 
 * makes mules *without* Vodka
 * makes mules with different brands of ginger beer
 * doesn't always use the same cup
 * puts a half-finished non-alcoholic mule in the fridge ON
 
-We continue.
+Still, we continue.  As people have said to me, yeah I know it's a lousy experiment, but *it's the only experiment I can do*.  
 
-As people have said to me, yeah I know it's a lousy experiment, but *it's the only experiment I can do*.  I used to be unsympathetic.
+I used to be unsympathetic.
 
 2017-Aug-22 weight (&Delta;)
     
@@ -186,5 +186,7 @@ As people have said to me, yeah I know it's a lousy experiment, but *it's the on
     #3 285.109 (+ 0.015) (h)
     #4 277.189 (+ 0.063)
 
-and again, #2 and #3 are the ones being used.  #4 changed very little from the previous weight, I must have just screwed up in the initial setup.
+and again, #2 and #3 are the ones being used.  
+
+We see that #4 is changed very little from the previous weight, I suppose I must have just screwed up in the initial weighing.
 
