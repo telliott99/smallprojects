@@ -31,7 +31,7 @@ for e in L:
     path = path.replace(':','/')   # use standard path sep
     
     src = path.replace('Macintosh HD','')   # strip Volume
-    info = src.replace(music,'')   # only artist album etc.
+    info = src.replace(music,'')   # only artist/album etc.
     album = '/'.join(info.split('/')[:-1])  # not song title
     
     '''    # debug

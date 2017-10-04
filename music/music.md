@@ -1,3 +1,5 @@
+#### Exporting a playlist
+
 So I've bought a couple hundred songs from the iTunes store over the last few years, and I wanted to archive them on a hard drive.  I don't use iCloud.
 
 It's pretty easy to export the corresponding playlist.  Just select "Purchased" in the sidebar
@@ -14,7 +16,9 @@ The resulting file looks pretty normal, except for the large number of tab-separ
 
 <img src="4.png" style="width: 400px;" />
 
-However, there are peculiarities:
+#### Dealing with UTF-16
+
+There are peculiarities:
 
 ```
 > hexdump -n 32 -C Purchased.txt
@@ -26,7 +30,7 @@ However, there are peculiarities:
 
 - The first two bytes are `ff fe`
 - the data is UTF-16
-- use of '\r' for newlines
+- use of `\r` for newlines
 
 Seeing `ff fe` as the byte order mark (BOM) indicates that the data is little-endian, which is confirmed by pairs of ASCII + `\x00`, with the least significant byte first. 
 
@@ -36,9 +40,9 @@ Hence, the next bytes are
 4e 00 61 00 6d 00 65
 ```
 
-i.e., 'Name' in little-endian UTF-8 format.
+i.e., 'Name' in little-endian UTF-16 format.
 
-A third peculiarity is the use of `\r`, hex `\x0d`, alone, for newlines as seen in this part of the hexdump:
+A third issue is the use of `\r`, hex `\x0d`, alone, for newlines as seen in this part of the hexdump:
 
 ```
 00000250  69 00 6f 00 6e 00 0d 00  4c 00 65 00 61 00 74 00  |i.o.n...L.e.a.t.|
@@ -58,10 +62,14 @@ Interim solution:
 
 - read the data from the file as bytes
 - remove the first two bytes
-- remove the even numbered bytes
-- split on '\r'
+- then remove the even numbered ones
+- split on `\r`
 
-Then, to deal with each entry.  There are a lot of fields, luckily the path is the last one.  Additionally, the path is weird, because the filename components contain spaces (which is no big deal), but the path separator is ':' and there is a leading 'Macintosh HD'.  
+#### Deal with each entry 
 
-Another issue is that I'd like to preserve the directory structure:  'Artist/Album/Song'.  You can see how that's done in the [script](script.py).
+There are a lot of fields, luckily the path is the last one.  Additionally, the path is weird, because the filename components contain spaces (which is no big deal), but the path separator is ':' and there is a leading 'Macintosh HD'.  
+
+Another issue is that I'd like to preserve the directory structure:  'Artist/Album/Song'.  
+
+You can see how all this is done in the [script](script.py).
 
