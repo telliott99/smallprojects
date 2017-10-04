@@ -1,8 +1,12 @@
 I am trying out a new strategy:  one repo to hold a variety of small write-up projects.
 
+#### saving music from an iTunes playlist
+
+* [music](music/music.md) 
+
 #### thermostat
 
-The [first one](thermostat.md) describes basic operation of the 
+Basic operation of the 
 
 * Trane XL824 Smart Control
 
