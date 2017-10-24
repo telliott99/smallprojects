@@ -10,14 +10,14 @@
 
 * I do not use Adobe Reader.  I cannot caution you strongly enough against its use.
 
-* You must be certain that any app you do use can be trusted.  If you enter a username and password for a bad actor, you are probably *pwned*, and there is no reliable recovery from that save following the first point above.* I use and highly recommend [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html), which monitors network connections.  I am careful not to allow connections that I don't know the reason for.* I am also currently evaluating [BlockBlock](https://objective-see.com/products/blockblock.html) from Objective-See, and they have a number of other innovative products.
+* You must be certain that any app you do use can be trusted.  If you enter a username and password for a bad actor, you are probably *pwned*, and there is no reliable recovery from that save following the first option above.* I use and highly recommend [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html), which monitors network connections.  I am careful not to allow connections that I don't know the reason for.* I am also currently evaluating [BlockBlock](https://objective-see.com/products/blockblock.html) from Objective-See, and they have a number of other innovative products.  (I stopped using BlockBlock because it bricks macOS updates, and I keep forgetting to turn it off before starting an update).
 
-* I do not have Sharing enabled, and do not login in remotely.  If you need such capabilities you should learn to `ssh`.
+* I do not have Sharing enabled, and do not login in remotely.  If you need such capabilities you should learn to generate Public/Private key pairs and use `ssh`.
 
-* I do not use Word.  If you do, make sure Macros are disabled. 
+* I do not use Word, Powerpoint or Excel.  If you do, make sure Macros are disabled. 
 #### Antivirus
 
-I do not have antivirus software running on my Mac.  Most of the time AV is ineffective because the threat is new and they haven't caught up yet.  
+I do not have antivirus software running on my Mac.  Most of the time AV is ineffective because the threat is new and they haven't caught up yet.  It also phones home a lot and you have no idea what it's saying.
 
 I have occasionally scanned with [ClamXav](https://www.clamxav.com) and never found anything.  
 
@@ -39,18 +39,20 @@ If you're interested in this topic Objective-See has a [page](https://objective-
 
 * Medium are held in an encrypted file which I decrypt for each use with a master password.  **Disk Utility** can do this for you.
 
-Length and randomness are most important, while a large character set is less important.  Complexity goes like SZ^N (size of the character set raised to the power of the length of the password).
+Length and randomness are most important, while a large character set is less important.  
+
+Complexity goes like SZ^N (size of the character set raised to the power of the length of the password).
 
 [Here](https://www.troyhunt.com/passwords-evolved-authentication-guidance-for-the-modern-era/) is a good discussion of several password issues.  Requirements that encourage use of weak passwords (like resets every 3 months) are a bad idea.I generate long random passwords, e.g.
 
 * `cohacrtztnlkinlaiemilrbrhrvvwr`
 * `wTbJFUDuZPXBrUTvgqkHLFPRCBwvly`
 
-using a utility that I wrote.
+using a simple utility that I wrote.
 
 You can generate random passwords with the KeyChain Access utility.  [Here](http://osxdaily.com/2011/05/10/generate-random-passwords-command-line/) and [here](https://apple.stackexchange.com/questions/170453/access-keychain-access-password-generator-password-assistant-via-terminal-with) are other options.
 
-A couple more ideas, from Terminal
+A couple more simple ideas, from Terminal
 
 ```
 > openssl rand -hex 20
@@ -72,7 +74,9 @@ d2cb415e067c7b13409eeb425cae6418
 >
 ```
 
-The eternal question is how to backup such data securely, since the two requirements conflict.
+#### Backups
+
+The eternal question is how to backup data securely, since the two requirements conflict.
 
 I store my encrypted password file on Dropbox.  I also have backups stored on various hard drives, though these may not be completely up-to-date.
 
