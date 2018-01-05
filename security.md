@@ -10,7 +10,9 @@
 
 * I do not use Adobe Reader.  I cannot caution you strongly enough against its use.
 
-* You must be certain that any app you do use can be trusted.  If you enter a username and password for a bad actor, you are probably *pwned*, and there is no reliable recovery from that save following the first option above.* I use and highly recommend [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html), which monitors network connections.  I am careful not to allow connections that I don't know the reason for.* I am also currently evaluating [BlockBlock](https://objective-see.com/products/blockblock.html) from Objective-See, and they have a number of other innovative products.  (I stopped using BlockBlock because it bricks macOS updates, and I keep forgetting to turn it off before starting an update).
+* You must be certain that any app you do use can be trusted.  If you enter a username and password for a bad actor, you are probably *pwned*, and **there is no reliable recovery from that save following the first option above**.* I use and highly recommend [LittleSnitch](https://www.obdev.at/products/littlesnitch/index.html), which monitors network connections.  I am careful not to allow connections that I don't know the reason for.* I am also currently evaluating [BlockBlock](https://objective-see.com/products/blockblock.html) from Objective-See, and they have a number of other innovative products.  
+
+(Update:  I stopped using BlockBlock because it bricks macOS updates, and I keep forgetting to turn it off before starting an update).
 
 * I do not have Sharing enabled, and do not login in remotely.  If you need such capabilities you should learn to generate Public/Private key pairs and use `ssh`.
 
@@ -27,7 +29,7 @@ Furthermore, Macs have not been strongly targeted by virus writers, for reasons 
 
 In this exploit, the download site for DVD-ripping software **HandBrake** was hacked.  For a period of four days, a version that installs [Proton.B](https://www.cybereason.com/labs-proton-b-what-this-mac-malware-actually-does/) was what you got with your download.  
 
-The first thing the malware did was to ask for your password, so it could upgrade its priveleges.  The next thing it did was to steal your Keychain.
+The first thing the malware did was to ask for your password, so it could upgrade its privileges.  The next thing it did was to steal your Keychain.
 
 If you're interested in this topic Objective-See has a [page](https://objective-see.com/malware.html) where you can see a list of Mac malware.  Don't download them, but there is a link for information about each one.I am always looking for new threats on the web by monitoring sites like* [hacker news](https://news.ycombinator.com)* [Brian Krebs](https://krebsonsecurity.com)
 * [malwarebytes](https://blog.malwarebytes.com)
@@ -76,7 +78,7 @@ d2cb415e067c7b13409eeb425cae6418
 
 #### Backups
 
-The eternal question is how to backup data securely, since the two requirements conflict.
+The eternal question is how to backup data securely, since the two requirements (frequency and security) conflict.
 
 I store my encrypted password file on Dropbox.  I also have backups stored on various hard drives, though these may not be completely up-to-date.
 
