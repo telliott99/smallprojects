@@ -1,0 +1,138 @@
+A single user should be Admin, since this is the type of account created during system installation.
+
+Supposedly, if the user unchecks the box in 
+
+System Preferences > Users and Groups?
+
+Then there would be no Admin account and no way to fix things.
+
+I thought this would be impossible, but people have the problem.  Also, some users report that this "happened on its own".
+
+---------------------------------
+
+Launch single-user mode
+(restart and hold down Cmd+S)
+
+The screen should say:
+
+Root device is mounted read only
+
+If you want to make modifications to files:
+        /sbin/fsck -fy
+        /sbin/mount -uw /
+
+The first command is "file system check".
+
+The second command mounts the disk / (that's what we want), as writeable.
+
+Now do:
+
+rm /var/db/.AppleSetupDone
+reboot
+
+This resets the Mac to finish the Setup process that normally happens during install, and that includes setting the user's group to Admin.
+
+According to 
+https://forums.developer.apple.com/thread/79235
+/sbin/mount -uw /
+should not be necessary.  But this seems to be in error.
+
+---------------------------------
+
+An alternative would be if the root account were activated, or to activate the root account now, and then change the user back to an Admin.
+
+If root is activated, to set up a new user, you do:
+
+dscl . -create /Users/username UserShell /bin/bash
+dscl . -create /Users/username RealName "John Smith"
+dscl . -create /Users/username UniqueID 1001"
+dscl . -create /Users/username PrimaryGroupID 1000"
+dscl . -create /Users/username NFSHomeDirectory /Local/Users/username
+dscl . -passwd /Users/username password
+dscl . -append /Groups/admin GroupMembership username
+
+Only the last would be necessary to make one an Admin.
+---------------------------------
+
+You can activate root from the command line 
+or in System Preferences > Users and Groups.
+
+However, you can't do any of this if you're not an Admin.
+
+https://support.apple.com/en-us/HT204012
+https://www.howtogeek.com/howto/35132/how-to-enable-the-root-user-in-mac-os-x/
+
+Click Login Options
+Authenticate
+Click on Network Account Server
+Open Directory Utility...
+Authenticate (in that window)
+Edit
+Change Root Password or Enable Root User
+
+---------------------------------
+
+From the command line:
+
+> dsenableroot
+username = telliott_admin
+user password:
+root password:
+verify root password:
+
+dsenableroot:: ***Successfully enabled root user.
+>
+
+To disable:
+
+> dsenableroot -d
+username = telliott_admin
+user password:
+
+dsenableroot:: ***Successfully disabled root user.
+>
+
+---------------------------------
+
+Following advice on the web:
+
+If necessary, restart in recovery mode:  Cmd+R, Restart.
+
+Then just go to the Utilities menu and choose Terminal.  Enter
+
+resetpassword
+
+Click on the newly opened window and select the volume Macintosh HD.  Now select SystemAdministrator(root) from the dropdown list.  
+
+Type the password twice and click save.
+
+Except there is no longer any selectable volume and no dropdown.
+
+---------------------------------
+
+However, you can do (from Terminal in recovery mode):
+
+dscl . -append /Groups/admin GroupMembership username
+
+(root login is not required).
+
+It is possible to set things so the above doesn't work without a firmware password.
+
+https://discussions.apple.com/thread/8016903
+
+Also:
+
+Multiple steps to get root from single user mode here:
+http://sachinparmarblog.com/enable-root-user-password-in-single-user-mode/
+
+/sbin/fsck -fy
+/sbin/mount -uw /
+launchctl load /System/Library/LaunchDaemons/com.apple.opendirectoryd.plist
+passwd root
+
+you will be prompted to enter a password twice
+
+reboot
+
+
+
