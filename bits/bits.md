@@ -195,6 +195,8 @@ In the last type
 
 there are 21 ``x``'s, that's ``2e21`` possible values, or a bit more than 2 million.  This is more than the actual total of Unicode code points, because of further restrictions on what sequences are allowed.
 
+In fact, if you look at the wikipedia [article](https://en.wikipedia.org/wiki/UTF-8#Codepage_layout), you'll see that for leading bytes starting with ``f``, only ``f0 - f4`` are allowed.
+
 #### UTF-16 encoding
 
 There is also an encoding that you might see called UTF-16, where each code point takes up two bytes or 16 bits.
@@ -221,7 +223,7 @@ rtf is proprietary, but the spec is open and it is widely supported.  It is simp
 
 A sequence in fasta (originally [``FASTA``](http://en.wikipedia.org/wiki/FASTA_format)) format contains ``>`` as the first character, followed by a title which, technically, runs to the first blank space, followed by a comment, which runs to the first newline.
 
-Starting on the first line is the sequence, which is allowed to have newlines but may not contain blank lines.  Genbank recommends no more than 80 characters per line (the default for some at least is 70).  
+Starting on the next line is the sequence, which is allowed to have newlines but may not contain blank lines.  Genbank recommends no more than 80 characters per line (the default for some at least is 70).  
 
 The sequence stops either at the first blank line, or at the next ``>``.  
 
@@ -280,4 +282,4 @@ We can use the ``tr`` utility to translate the input file ``hello.txt`` by doing
 >
 ```
 
-(revised 2018-01-24) 
+(revised 2019-03-23) 
