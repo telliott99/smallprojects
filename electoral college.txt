@@ -1,0 +1,24 @@
+Article V
+"The Congress .. shall propose Amendments to this Constitution ..;  Provided ..
+that no state, without its consent, shall be deprived of its equal Suffrage in the Senate." 
+
+Article I
+Section III
+Clause I
+"The Senate of the United States shall be composed of two Senators from each State, chosen by the Legislature thereof, for six Years .. "
+
+Article II
+Section I
+"Each State shall appoint, in such Manner as the Legislature thereof may direct, a Number of Electors, equal to the whole Number of Senators and Representatives .. "
+
+Amendment XII
+"The Electors shall meet in their respective states, and vote by ballot for President and Vice-President, one of whom, at least, shall not be an inhabitant of the same state with themselves; they shall name in their ballots the person voted for as President, and in distinct ballots the person voted for as Vice-President .. "
+
+Analysis:
+Article V prohibits any modification of the rules for choosing the Senators (2 from each state) which would deprive a state of equal suffrage in the Senate.
+
+There is argument about whether a two-step process would work:  i.e. first amend to change article V, then amend to change Article I.
+
+Article II sets out the rules for the Electoral College.  It has *already* been amended (Amendment XII).
+
+There seems no reason why the Electoral College could not be abolished.
